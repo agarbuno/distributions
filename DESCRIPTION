@@ -1,19 +1,16 @@
 Package: distributions
-Title: What the Package Does (One Line, Title Case)
+Title: distributions: Wrapper functions for random variables
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: MIT + file LICENSE
+    person("Alfredo", "Garbuno", , "alfredo.garbuno@itam.mx", role = c("aut", "cre"))
+Description: This pakage aims to provide a wrapper on several functions
+    used to characterize random variables in R. The idea is to provide a
+    tidy interfase to the manipulation of random numbers by defining
+    random variable objects. This material is currently thought to provide
+    support in my courses @ITAM.
+License: License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-Suggests: 
-    testthat (>= 3.0.0)
-Config/testthat/edition: 3
 Imports: 
-    R6,
-    stats
-URL: https://github.com/agarbuno/distributions
-BugReports: https://github.com/agarbuno/distributions/issues
+    R6 (>= 2.5.1)
