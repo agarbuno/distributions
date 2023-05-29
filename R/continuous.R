@@ -9,5 +9,5 @@
 #' @examples
 #' x <- random(10)
 random <- function(nsamples){
-    rnorm(nsamples)
+    stats::rnorm(nsamples)
 }
