@@ -30,13 +30,21 @@ random variable.
 library(distributions)
 x <- GaussianRandomVariable$new()
 x
-#> <RandomVariable>
+#> <Gaussian>
+#>   Inherits from: <ContinuousRandomVariable>
 #>   Public:
 #>     density: function (x, log = TRUE) 
 #>     initialize: function (mean = 0, sd = 1) 
 #>     mean: 0
 #>     sample: function (n = 1) 
+#>     samples: function (nsamples = 1, ...) 
 #>     sd: 1
+```
+
+``` r
+class(x)
+#> [1] "Gaussian"                 "ContinuousRandomVariable"
+#> [3] "R6"
 ```
 
 You can use the `sample` or the `density` methods to either generate

@@ -42,6 +42,10 @@ x <- GaussianRandomVariable$new()
 x
 ```
 
+```{r}
+class(x)
+```
+
 You can use the `sample` or the `density` methods to either generate random numbers 
 from this random variable or evaluate its density function. For example, 
 we can generate a collection of 100 random points or evaluate the density function 

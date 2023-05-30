@@ -4,10 +4,13 @@
 \alias{GaussianRandomVariable}
 \title{Gaussian random variable object}
 \value{
-A \code{\link{RandomVariable}} object.
+A \code{\link{ContinuousRandomVariable}} object of type \code{\link{Gaussian}} type.
 }
 \description{
-Normal random variable
+Defines a Normal random variable
+}
+\section{Super class}{
+\code{\link[distributions:ContinuousRandomVariable]{distributions::ContinuousRandomVariable}} -> \code{Gaussian}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
@@ -23,14 +26,21 @@ the dispersion around the mean.}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-RandomVariable-new}{\code{GaussianRandomVariable$new()}}
-\item \href{#method-RandomVariable-sample}{\code{GaussianRandomVariable$sample()}}
-\item \href{#method-RandomVariable-density}{\code{GaussianRandomVariable$density()}}
+\item \href{#method-Gaussian-new}{\code{GaussianRandomVariable$new()}}
+\item \href{#method-Gaussian-sample}{\code{GaussianRandomVariable$sample()}}
+\item \href{#method-Gaussian-density}{\code{GaussianRandomVariable$density()}}
 }
 }
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="distributions" data-topic="ContinuousRandomVariable" data-id="samples"><a href='../../distributions/html/ContinuousRandomVariable.html#method-ContinuousRandomVariable-samples'><code>distributions::ContinuousRandomVariable$samples()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-RandomVariable-new"></a>}}
-\if{latex}{\out{\hypertarget{method-RandomVariable-new}{}}}
+\if{html}{\out{<a id="method-Gaussian-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Gaussian-new}{}}}
 \subsection{Method \code{new()}}{
 Initializes the random variable
 \subsection{Usage}{
@@ -48,8 +58,8 @@ Initializes the random variable
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-RandomVariable-sample"></a>}}
-\if{latex}{\out{\hypertarget{method-RandomVariable-sample}{}}}
+\if{html}{\out{<a id="method-Gaussian-sample"></a>}}
+\if{latex}{\out{\hypertarget{method-Gaussian-sample}{}}}
 \subsection{Method \code{sample()}}{
 Sampler
 \subsection{Usage}{
@@ -63,10 +73,13 @@ Sampler
 }
 \if{html}{\out{</div>}}
 }
+\subsection{Returns}{
+\link{array}
+}
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-RandomVariable-density"></a>}}
-\if{latex}{\out{\hypertarget{method-RandomVariable-density}{}}}
+\if{html}{\out{<a id="method-Gaussian-density"></a>}}
+\if{latex}{\out{\hypertarget{method-Gaussian-density}{}}}
 \subsection{Method \code{density()}}{
 Density function
 \subsection{Usage}{
@@ -81,6 +94,9 @@ Density function
 \item{\code{log}}{(Boolean) indicates if we are evaluating the \code{log-density}.}
 }
 \if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+\link{array}
 }
 }
 }
