@@ -9,11 +9,11 @@
 [![pkgdown](https://github.com/agarbuno/distributions/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/agarbuno/distributions/actions/workflows/pkgdown.yaml)
 <!-- badges: end -->
 
-The goal of distributions is to …
+The goal of `distributions` is to …
 
 ## Installation
 
-You can install the development version of distributions from
+You can install the development version of `distributions` from
 [GitHub](https://github.com/) with:
 
 ``` r
@@ -23,25 +23,30 @@ devtools::install_github("agarbuno/distributions")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows how to define a standard normal
+random variable.
 
 ``` r
 library(distributions)
-## basic example code
+x <- GaussianRandomVariable$new()
+x
+#> <RandomVariable>
+#>   Public:
+#>     density: function (x, log = TRUE) 
+#>     initialize: function (mean = 0, sd = 1) 
+#>     mean: 0
+#>     sample: function (n = 1) 
+#>     sd: 1
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+You can use the `sample` or the `density` methods to either generate
+random numbers from this random variable or evaluate its density
+function. For example, we can generate a collection of 100 random points
+or evaluate the density function in 1.
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+x$sample(100)
+x$density(1)
 ```
 
 You’ll still need to render `README.Rmd` regularly, to keep `README.md`

@@ -6,6 +6,7 @@
 #'
 #' @return A [`RandomVariable`] object.
 #'
+#' @export
 
 GaussianRandomVariable <-
   R6::R6Class("RandomVariable",
