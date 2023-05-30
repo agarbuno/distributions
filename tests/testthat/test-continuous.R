@@ -1,3 +1,4 @@
+x <- GaussianRandomVariable$new()
 test_that("correct random numbers", {
-  expect_equal(length(random(1)), 1)
+  expect_equal(length(x$sample(1)), 1)
 })

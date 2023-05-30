@@ -10,5 +10,5 @@ Description: This pakage aims to provide a wrapper on several functions
     support in my courses @ITAM.
 License: License: MIT + file LICENSE
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
+Roxygen: list(markdown = TRUE, r6 = TRUE)
 RoxygenNote: 7.2.3
