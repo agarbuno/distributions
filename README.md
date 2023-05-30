@@ -7,7 +7,6 @@
 
 [![test-coverage](https://github.com/agarbuno/distributions/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/agarbuno/distributions/actions/workflows/test-coverage.yaml)
 [![pkgdown](https://github.com/agarbuno/distributions/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/agarbuno/distributions/actions/workflows/pkgdown.yaml)
-[![document](https://github.com/agarbuno/distributions/actions/workflows/document.yaml/badge.svg)](https://github.com/agarbuno/distributions/actions/workflows/document.yaml)
 <!-- badges: end -->
 
 The goal of distributions is to …
