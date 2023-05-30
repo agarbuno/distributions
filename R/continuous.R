@@ -20,7 +20,7 @@ ContinuousRandomVariable <- R6::R6Class(
     #' @param nsamples number of samples to generate.
     #' @param ... allows for more inputs.
     #'
-    samples = function(nsamples = 1, ...) {
+    sample = function(nsamples = 1, ...) {
 
     },
 
