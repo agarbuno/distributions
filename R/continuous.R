@@ -1,7 +1,7 @@
 #' Continuous Random variable structure
 #'
 #' @description
-#' Sets the structure of random variables objects in the 
+#' Sets the structure of random variables objects in the
 #' continuous setting
 #'
 #' @return A [`RandomVariable`] object.
@@ -14,12 +14,12 @@ ContinuousRandomVariable <- R6::R6Class(
   public = list(
 
     #' @description
-    #' Generates random numbers from that behave like 
+    #' Generates random numbers from that behave like
     #' realizations of the random variable.
     #'
     #' @param nsamples number of samples to generate.
-    #' @param ... allows for more inputs. 
-    #' 
+    #' @param ... allows for more inputs.
+    #'
     samples = function(nsamples = 1, ...) {
 
     },
@@ -27,8 +27,8 @@ ContinuousRandomVariable <- R6::R6Class(
     #' @description
     #' Evaluates the `pdf` of the random variable.
     #'
-    #' @param x [`array(double)`] input on where to evaluate density function. 
-    #' @param log [`Boolean`] indicates if we need the log-density. 
+    #' @param x [`array(double)`] input on where to evaluate density function.
+    #' @param log [`Boolean`] indicates if we need the log-density.
     #' @param ... allows for more inputs.
     density = function(x, log = TRUE, ...) {
 
