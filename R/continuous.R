@@ -71,16 +71,16 @@ GaussianRandomVariable <-
       },
 
       #' @description
-      #' Sampler
+      #' Generates random variables using the `rnorm` function.
       #'
       #' @param n (integer) the number of random numbers.
       #' @return [array]
-      sample = function(n = 1) {
-        stats::rnorm(n, self$mean, sd = self$sd)
+      sample = function(nsamples = 1) {
+        stats::rnorm(nsamples, self$mean, sd = self$sd)
       },
 
       #' @description
-      #' Density function
+      #' Evalluates the density function using the `pnorm` function.
       #'
       #' @param x   (array) to evaluate the density function.
       #' @param log (Boolean) indicates if we are evaluating the `log-density`.
