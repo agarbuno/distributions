@@ -1,6 +1,8 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<a href="https://agarbuno.github.io/distributions/"><img src="man/figures/logo.png" align="center" height="139" /></a>
+
 # distributions
 
 <!-- badges: start -->
