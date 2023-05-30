@@ -12,10 +12,10 @@ Normal random variable
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{mean}}{(double)\cr
+\item{\code{mean}}{(\code{double})\cr
 the center of the distribution.}
 
-\item{\code{sd}}{(positive)\cr
+\item{\code{sd}}{(\code{positive})\cr
 the dispersion around the mean.}
 }
 \if{html}{\out{</div>}}
@@ -26,7 +26,6 @@ the dispersion around the mean.}
 \item \href{#method-RandomVariable-new}{\code{GaussianRandomVariable$new()}}
 \item \href{#method-RandomVariable-sample}{\code{GaussianRandomVariable$sample()}}
 \item \href{#method-RandomVariable-density}{\code{GaussianRandomVariable$density()}}
-\item \href{#method-RandomVariable-clone}{\code{GaussianRandomVariable$clone()}}
 }
 }
 \if{html}{\out{<hr>}}
@@ -80,23 +79,6 @@ Density function
 \item{\code{x}}{(array) to evaluate the density function.}
 
 \item{\code{log}}{(Boolean) indicates if we are evaluating the \code{log-density}.}
-}
-\if{html}{\out{</div>}}
-}
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-RandomVariable-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-RandomVariable-clone}{}}}
-\subsection{Method \code{clone()}}{
-The objects of this class are cloneable with this method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{GaussianRandomVariable$clone(deep = FALSE)}\if{html}{\out{</div>}}
-}
-
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{deep}}{Whether to make a deep clone.}
 }
 \if{html}{\out{</div>}}
 }

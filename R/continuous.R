@@ -10,13 +10,14 @@
 
 GaussianRandomVariable <- 
     R6::R6Class("RandomVariable",
+        cloneable = FALSE,
           public = list(
-            #' @field mean (double)\cr
-            #' the center of the distribution.
+            #' @field mean (`double`)\cr
+            #'  the center of the distribution.
             mean = NA,
 
-            #' @field sd (positive)\cr
-            #' the dispersion around the mean.
+            #' @field sd (`positive`)\cr
+            #'  the dispersion around the mean.
             sd = NA,
 
             #' @description
