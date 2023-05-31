@@ -2,6 +2,11 @@ url: ~
 template:
   bootstrap: 5
 
+navbar:
+  right: 
+    - icon: fa-github
+      href: https://github.com/agarbuno/distributions
+
 reference: 
   - title: "Continuous random variables"
     contents: 

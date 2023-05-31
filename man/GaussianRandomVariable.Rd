@@ -11,7 +11,7 @@ the other definitions in \code{distributions} this is an
 is from a \deqn{X \sim \mathsf{Normal}(\mu, \sigma)\,,}
 where \eqn{\mu} and \eqn{\sigma} are the mean and standar deviation,
 respectively.
-\subsection{Note:}{
+\subsection{Note}{
 
 All random variables in \code{distributions} are defined as \code{\link{R6}}
 objects. The \code{fields} (referenced below) are needed for objects of
