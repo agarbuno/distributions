@@ -49,7 +49,17 @@ ContinuousRandomVariable <- R6::R6Class(
 #'  is from a \deqn{X \sim \mathsf{Normal}(\mu, \sigma)\,,} 
 #'  where \eqn{\mu} and \eqn{\sigma} are the mean and standar deviation, 
 #'  respectively. 
-#'
+#' 
+#'  ## Note 
+#'   All random variables in `distributions` are defined as [`R6`]
+#'   objects. The `fields` (referenced below) are needed for objects of
+#'   [`R6::R6Class`]. In our context these are what defines 
+#'   which specific instance of a 
+#'   random variable is used. That is, the public `fields` are the
+#'   parameters of the random variable \eqn{\theta \in \mathbb{R}^p}, for some
+#'   \eqn{p}.
+#' 
+#' 
 #' @export
 GaussianRandomVariable <-
   R6::R6Class("Gaussian",
