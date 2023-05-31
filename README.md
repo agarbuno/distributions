@@ -9,7 +9,22 @@
 [![pkgdown](https://github.com/agarbuno/distributions/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/agarbuno/distributions/actions/workflows/pkgdown.yaml)
 <!-- badges: end -->
 
-The goal of `distributions` is to …
+The goal of `distributions` is to have a standard collection of objects
+to define random variables in `R`. The philosophy of this package
+follows the same principles found in
+[Numpy](https://numpy.org/doc/stable/reference/random/index.html) or
+[Julia](https://juliastats.org/Distributions.jl/stable/). That is, the
+emphasis is having an object representing an a random variable for which
+we can query according to our interests. For example, to evaluate the
+density function or generate random numbers.
+
+This is mainly done to avoid the typical `R` syntax of the family of
+functions that surround a random variable. See for example the functions
+needed for a [normal random
+variable](https://rdrr.io/r/stats/Normal.html).
+
+The main objective of this package is to be used in my teaching but I am
+happy to extend it further to a more general use if needed.
 
 ## Installation
 
@@ -36,8 +51,7 @@ x
 #>     density: function (x, log = TRUE) 
 #>     initialize: function (mean = 0, sd = 1) 
 #>     mean: 0
-#>     sample: function (n = 1) 
-#>     samples: function (nsamples = 1, ...) 
+#>     sample: function (nsamples = 1) 
 #>     sd: 1
 ```
 
