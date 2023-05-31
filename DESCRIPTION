@@ -8,7 +8,13 @@ Description: This pakage aims to provide a wrapper on several functions
     tidy interfase to the manipulation of random numbers by defining
     random variable objects. This material is currently thought to provide
     support in my courses @ITAM.
+URL: https://github.com/agarbuno/distributions
 License: License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE, r6 = TRUE)
 RoxygenNote: 7.2.3
+Config/Needs/website: pkgdown,
+ rstudio/webshot2,
+ tidyverse/tidytemplate
+Remotes: 
+    agarbuno/distributions

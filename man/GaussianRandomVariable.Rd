@@ -32,7 +32,7 @@ parameters of the random variable \eqn{\theta \in \mathbb{R}^p}, for some
 \item{\code{mean}}{(\code{double}) \cr
 the center of the distribution, \eqn{\mu}.}
 
-\item{\code{sd}}{(\code{double}) \cr
+\item{\code{sd}}{(\code{double}, positive) \cr
 the dispersion around the mean, \eqn{\sigma \geq 0}.}
 }
 \if{html}{\out{</div>}}
@@ -58,9 +58,10 @@ mean (\code{mean}) and standard deviation (\code{sd}).
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{mean}}{the center of the distribution.}
+\item{\code{mean}}{(\code{double}) the center of the distribution.}
 
-\item{\code{sd}}{the dispersion around the center of the distribution.}
+\item{\code{sd}}{(\code{double}, positive) the dispersion around
+the center of the distribution.}
 }
 \if{html}{\out{</div>}}
 }

@@ -70,7 +70,7 @@ GaussianRandomVariable <-
       #'  the center of the distribution, \eqn{\mu}.
       mean = NA,
 
-      #' @field sd (`double`) \cr
+      #' @field sd (`double`, positive) \cr
       #'  the dispersion around the mean, \eqn{\sigma \geq 0}.
       sd = NA,
 
@@ -78,8 +78,9 @@ GaussianRandomVariable <-
       #' Generates a Gaussian [`ContinuousRandomVariable`] object with specified
       #' mean (`mean`) and standard deviation (`sd`).
       #'
-      #' @param mean the center of the distribution.
-      #' @param sd   the dispersion around the center of the distribution.
+      #' @param mean (`double`) the center of the distribution.
+      #' @param sd   (`double`, positive) the dispersion around
+      #'  the center of the distribution.
       initialize = function(mean = 0, sd = 1) {
         self$mean <- mean
         self$sd <- sd

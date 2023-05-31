@@ -1,5 +1,6 @@
 url: ~
 template:
+  package: tidytemplate
   bootstrap: 5
 
 navbar:
@@ -7,7 +8,17 @@ navbar:
     - icon: fa-github
       href: https://github.com/agarbuno/distributions
 
+home: 
+  sidebar:
+    links: 
+      - text: Source code
+        href: https://github.com/agarbuno/distributions
+
 reference: 
   - title: "Continuous random variables"
     contents: 
     - has_concept("continuous")
+
+development:
+  mode: unreleased
+  version_label: default
