@@ -76,7 +76,7 @@ Generates random variables using the \code{\link[stats:Poisson]{stats::rpois()}}
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{nsamples}}{(integer) the number of random numbers
+\item{\code{nsamples}}{(\code{integer}) the number of random numbers
 being generated that behaves like the random variables.}
 }
 \if{html}{\out{</div>}}

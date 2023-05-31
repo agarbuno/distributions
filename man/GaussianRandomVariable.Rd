@@ -76,14 +76,16 @@ the center of the distribution.}
 \subsection{Method \code{sample()}}{
 Generates random variables using the \code{\link[stats:Normal]{stats::rnorm()}} function.
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{GaussianRandomVariable$sample(nsamples = 1)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{GaussianRandomVariable$sample(nsamples = 1, nreps = 1)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{nsamples}}{(integer) the number of random numbers
+\item{\code{nsamples}}{(\code{integer}) the number of random numbers
 being generated that behaves like the random variables.}
+
+\item{\code{nreps}}{(\code{integer})}
 }
 \if{html}{\out{</div>}}
 }

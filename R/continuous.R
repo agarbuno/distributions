@@ -90,8 +90,12 @@ GaussianRandomVariable <-
       #'
       #' @return (`array`) of random numbers from the distribution.
       #' @template sampler
-      sample = function(nsamples = 1) {
-        stats::rnorm(nsamples, self$mean, sd = self$sd)
+      sample = function(nsamples = 1, nreps = 1) {
+        ntotal <- nsamples * nreps 
+        return(
+          stats::rnorm(ntotal, self$mean, sd = self$sd) |> 
+            format_samples(nreps)
+        )
       },
 
       #' @description
@@ -159,7 +163,10 @@ BetaRandomVariable <-
       #' @return (`array`) of random numbers from the distribution.
       #' @template sampler
       sample = function(nsamples = 1) {
-        stats::rbeta(nsamples, self$alpha, self$beta)
+        return(
+          stats::rbeta(nsamples, self$alpha, self$beta) |> 
+            format_samples(nreps)
+        )
       },
 
       #' @description
