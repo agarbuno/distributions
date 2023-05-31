@@ -6,9 +6,8 @@
 #' Sets the structure of random variables objects in the
 #' continuous setting
 #'
-#' @return A [`RandomVariable`] object.
+#' @return A [`ContinuousRandomVariable`] object.
 #'
-#' @export
 ContinuousRandomVariable <- R6::R6Class(
   "ContinuousRandomVariable",
   cloneable = FALSE,
@@ -28,7 +27,7 @@ ContinuousRandomVariable <- R6::R6Class(
     #' @description
     #' Evaluates the `pdf` of the random variable.
     #'
-    #' @param x [`array(double)`] input on where to evaluate density function.
+    #' @param x [`array`] input on where to evaluate density function.
     #' @param log [`logical`] indicates if we need the log-density.
     #' @param ... allows for more inputs.
     density = function(x, log = TRUE, ...) {
@@ -41,30 +40,33 @@ ContinuousRandomVariable <- R6::R6Class(
 #' GaussianRandomVariable object 
 #' 
 #' @name GaussianRandomVariable
-#' @family continuous random variables
+#' @family continuous
 #' 
-#' @description Defines a Normal random variable. As other 
-#'  objects this is [R6][R6::R6Class] object.
+#' @description Defines a Normal random variable. It uses in the backend 
+#'  all functions that defines a [`Gaussian`][rnorm] random variable. As other 
+#'  the other definitions in `distributions` this is an 
+#'  [`R6`][R6::R6Class] object. Tha parametrization used 
+#'  is from a \deqn{X \sim \mathsf{Normal}(\mu, \sigma)\,,} 
+#'  where \eqn{\mu} and \eqn{\sigma} are the mean and standar deviation, 
+#'  respectively. 
 #'
-#' @details 
-#' Should I use this?
-#' 
 #' @export
 GaussianRandomVariable <-
   R6::R6Class("Gaussian",
     inherit = ContinuousRandomVariable,
     cloneable = FALSE,
     public = list(
-      #' @field mean (`double`)\cr
-      #'  the center of the distribution.
-      mean = NA,
+      #' @field mean (`double`) \cr
+      #'  the center of the distribution, \eqn{\mu}.
+      mean = NA,   
 
-      #' @field sd (`positive`)\cr
-      #'  the dispersion around the mean.
-      sd = NA,
+      #' @field sd (`positive`) \cr
+      #'  the dispersion around the mean, \eqn{\sigma}.
+      sd = NA, 
 
       #' @description
-      #' Initializes the random variable
+      #' Generates a Gaussian [`ContinuousRandomVariable`] object with specified
+      #' mean (`mean`) and standard deviation (`sd`).
       #'
       #' @param mean the center of the distribution.
       #' @param sd   the dispersion around the center of the distribution.
@@ -72,22 +74,19 @@ GaussianRandomVariable <-
         self$mean <- mean
         self$sd <- sd
       },
-
       #' @description
-      #' Generates random variables using the `rnorm` function.
+      #' Generates random variables using the [`stats::rnorm()`] function.
+      #' 
       #'
-      #' @param nsamples (integer) the number of random numbers.
-      #' @return [array]
+      #' @template sampler
       sample = function(nsamples = 1) {
         stats::rnorm(nsamples, self$mean, sd = self$sd)
       },
 
       #' @description
-      #' Evalluates the density function using the `pnorm` function.
+      #' Evaluates the density function using the [`stats::pnorm()`] function.
       #'
-      #' @param x   (array) to evaluate the density function.
-      #' @param log (Boolean) indicates if we are evaluating the `log-density`.
-      #' @return [array]
+      #' @template density
       density = function(x, log = TRUE) {
         stats::dnorm(x, self$mean, sd = self$sd, log = log)
       }

@@ -3,43 +3,93 @@
 \name{GaussianRandomVariable}
 \alias{GaussianRandomVariable}
 \title{GaussianRandomVariable object}
-\arguments{
-\item{mean}{the center of the distribution.}
-
-\item{sd}{the dispersion around the center of the distribution.}
-
-\item{nsamples}{(integer) the number of random numbers.}
-
-\item{x}{(array) to evaluate the density function.}
-
-\item{log}{(Boolean) indicates if we are evaluating the \code{log-density}.}
-}
-\value{
-\link{array}
-
-\link{array}
-}
 \description{
-Defines a Normal random variable. As other
-objects this is \link[R6:R6Class]{R6} object.
-
-Initializes the random variable
-
-Generates random variables using the \code{rnorm} function.
-
-Evalluates the density function using the \code{pnorm} function.
+Defines a Normal random variable. It uses in the backend
+all functions that defines a \code{\link[=rnorm]{Gaussian}} random variable. As other
+the other definitions in \code{distributions} this is an
+\code{\link[R6:R6Class]{R6}} object. Tha parametrization used
+is from a \deqn{X \sim \mathsf{Normal}(\mu, \sigma)\,,}
+where \eqn{\mu} and \eqn{\sigma} are the mean and standar deviation,
+respectively.
 }
-\details{
-Should I use this?
+\concept{continuous}
+\section{Super class}{
+\code{distributions::ContinuousRandomVariable} -> \code{Gaussian}
 }
-\section{Fields}{
-
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{mean}}{(\code{double})\cr
-the center of the distribution.}
+\item{\code{mean}}{(\code{double}) \cr
+the center of the distribution, \eqn{\mu}.}
 
-\item{\code{sd}}{(\code{positive})\cr
-the dispersion around the mean.}
-}}
+\item{\code{sd}}{(\code{positive}) \cr
+the dispersion around the mean, \eqn{\sigma}.}
+}
+\if{html}{\out{</div>}}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Gaussian-new}{\code{GaussianRandomVariable$new()}}
+\item \href{#method-Gaussian-sample}{\code{GaussianRandomVariable$sample()}}
+\item \href{#method-Gaussian-density}{\code{GaussianRandomVariable$density()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Gaussian-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Gaussian-new}{}}}
+\subsection{Method \code{new()}}{
+Generates a Gaussian \code{\link{ContinuousRandomVariable}} object with specified
+mean (\code{mean}) and standard deviation (\code{sd}).
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{GaussianRandomVariable$new(mean = 0, sd = 1)}\if{html}{\out{</div>}}
+}
 
-\concept{continuous random variables}
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{mean}}{the center of the distribution.}
+
+\item{\code{sd}}{the dispersion around the center of the distribution.}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Gaussian-sample"></a>}}
+\if{latex}{\out{\hypertarget{method-Gaussian-sample}{}}}
+\subsection{Method \code{sample()}}{
+Generates random variables using the \code{\link[stats:Normal]{stats::rnorm()}} function.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{GaussianRandomVariable$sample(nsamples = 1)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{nsamples}}{(integer) the number of random numbers
+being generated that behaves like the random variables.}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Gaussian-density"></a>}}
+\if{latex}{\out{\hypertarget{method-Gaussian-density}{}}}
+\subsection{Method \code{density()}}{
+Evaluates the density function using the \code{\link[stats:Normal]{stats::pnorm()}} function.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{GaussianRandomVariable$density(x, log = TRUE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{x}}{(array) to evaluate the density function.}
+
+\item{\code{log}}{(Boolean) indicates if we are evaluating the \code{log-density}.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}
