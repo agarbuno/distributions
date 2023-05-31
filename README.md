@@ -10,12 +10,12 @@
 <!-- badges: end -->
 
 The goal of `distributions` is to have a standard collection of objects
-to define random variables in `R`. The philosophy of this package
+that define random variables in `R`. The philosophy of this package
 follows the same principles found in
 [Numpy](https://numpy.org/doc/stable/reference/random/index.html) or
 [Julia](https://juliastats.org/Distributions.jl/stable/). That is, the
-emphasis is having an object representing an a random variable for which
-we can query according to our interests. For example, to evaluate the
+emphasis is having an object representing a random variable for which we
+can query according to our interests. For example, we could evaluate the
 density function or generate random numbers.
 
 This is mainly done to avoid the typical `R` syntax of the family of
@@ -24,7 +24,7 @@ needed for a [normal random
 variable](https://rdrr.io/r/stats/Normal.html).
 
 The main objective of this package is to be used in my teaching but I am
-happy to extend it further to a more general use if needed.
+happy to extend it further to a more general audience if needed.
 
 ## Installation
 
