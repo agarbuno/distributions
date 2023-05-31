@@ -2,101 +2,44 @@
 % Please edit documentation in R/continuous.R
 \name{GaussianRandomVariable}
 \alias{GaussianRandomVariable}
-\title{Gaussian random variable object}
+\title{GaussianRandomVariable object}
+\arguments{
+\item{mean}{the center of the distribution.}
+
+\item{sd}{the dispersion around the center of the distribution.}
+
+\item{nsamples}{(integer) the number of random numbers.}
+
+\item{x}{(array) to evaluate the density function.}
+
+\item{log}{(Boolean) indicates if we are evaluating the \code{log-density}.}
+}
 \value{
-A \code{\link{ContinuousRandomVariable}} object of type \code{\link{Gaussian}} type.
+\link{array}
+
+\link{array}
 }
 \description{
-Defines a Normal random variable
+Defines a Normal random variable. As other
+objects this is \link[R6:R6Class]{R6} object.
+
+Initializes the random variable
+
+Generates random variables using the \code{rnorm} function.
+
+Evalluates the density function using the \code{pnorm} function.
 }
-\section{Super class}{
-\code{\link[distributions:ContinuousRandomVariable]{distributions::ContinuousRandomVariable}} -> \code{Gaussian}
+\details{
+Should I use this?
 }
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
+\section{Fields}{
+
 \describe{
 \item{\code{mean}}{(\code{double})\cr
 the center of the distribution.}
 
 \item{\code{sd}}{(\code{positive})\cr
 the dispersion around the mean.}
-}
-\if{html}{\out{</div>}}
-}
-\section{Methods}{
-\subsection{Public methods}{
-\itemize{
-\item \href{#method-Gaussian-new}{\code{GaussianRandomVariable$new()}}
-\item \href{#method-Gaussian-sample}{\code{GaussianRandomVariable$sample()}}
-\item \href{#method-Gaussian-density}{\code{GaussianRandomVariable$density()}}
-}
-}
-\if{html}{\out{
-<details open><summary>Inherited methods</summary>
-<ul>
-<li><span class="pkg-link" data-pkg="distributions" data-topic="ContinuousRandomVariable" data-id="samples"><a href='../../distributions/html/ContinuousRandomVariable.html#method-ContinuousRandomVariable-samples'><code>distributions::ContinuousRandomVariable$samples()</code></a></span></li>
-</ul>
-</details>
 }}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-Gaussian-new"></a>}}
-\if{latex}{\out{\hypertarget{method-Gaussian-new}{}}}
-\subsection{Method \code{new()}}{
-Initializes the random variable
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{GaussianRandomVariable$new(mean = 0, sd = 1)}\if{html}{\out{</div>}}
-}
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{mean}}{the center of the distribution.}
-
-\item{\code{sd}}{the dispersion around the center of the distribution.}
-}
-\if{html}{\out{</div>}}
-}
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-Gaussian-sample"></a>}}
-\if{latex}{\out{\hypertarget{method-Gaussian-sample}{}}}
-\subsection{Method \code{sample()}}{
-Sampler
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{GaussianRandomVariable$sample(n = 1)}\if{html}{\out{</div>}}
-}
-
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{n}}{(integer) the number of random numbers.}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-\link{array}
-}
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-Gaussian-density"></a>}}
-\if{latex}{\out{\hypertarget{method-Gaussian-density}{}}}
-\subsection{Method \code{density()}}{
-Density function
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{GaussianRandomVariable$density(x, log = TRUE)}\if{html}{\out{</div>}}
-}
-
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{x}}{(array) to evaluate the density function.}
-
-\item{\code{log}}{(Boolean) indicates if we are evaluating the \code{log-density}.}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-\link{array}
-}
-}
-}
+\concept{continuous random variables}

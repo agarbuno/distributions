@@ -1,5 +1,7 @@
-#' Continuous Random variable structure
+# Continuous random variables -------------------------------------------------
+#' Continuous Random variable structure 
 #'
+#' @noRd
 #' @description
 #' Sets the structure of random variables objects in the
 #' continuous setting
@@ -7,7 +9,6 @@
 #' @return A [`RandomVariable`] object.
 #'
 #' @export
-
 ContinuousRandomVariable <- R6::R6Class(
   "ContinuousRandomVariable",
   cloneable = FALSE,
@@ -17,7 +18,7 @@ ContinuousRandomVariable <- R6::R6Class(
     #' Generates random numbers from that behave like
     #' realizations of the random variable.
     #'
-    #' @param nsamples number of samples to generate.
+    #' @param nsamples (integer) number of samples to generate.
     #' @param ... allows for more inputs.
     #'
     sample = function(nsamples = 1, ...) {
@@ -28,7 +29,7 @@ ContinuousRandomVariable <- R6::R6Class(
     #' Evaluates the `pdf` of the random variable.
     #'
     #' @param x [`array(double)`] input on where to evaluate density function.
-    #' @param log [`Boolean`] indicates if we need the log-density.
+    #' @param log [`logical`] indicates if we need the log-density.
     #' @param ... allows for more inputs.
     density = function(x, log = TRUE, ...) {
 
@@ -36,17 +37,19 @@ ContinuousRandomVariable <- R6::R6Class(
   )
 )
 
-
-
-#' Gaussian random variable object
+# Gaussian random variables ---------------------------------------------------
+#' GaussianRandomVariable object 
+#' 
+#' @name GaussianRandomVariable
+#' @family continuous random variables
+#' 
+#' @description Defines a Normal random variable. As other 
+#'  objects this is [R6][R6::R6Class] object.
 #'
-#' @description
-#' Defines a Normal random variable
-#'
-#' @return A [`ContinuousRandomVariable`] object of type [`Gaussian`] type.
-#'
+#' @details 
+#' Should I use this?
+#' 
 #' @export
-
 GaussianRandomVariable <-
   R6::R6Class("Gaussian",
     inherit = ContinuousRandomVariable,
@@ -73,7 +76,7 @@ GaussianRandomVariable <-
       #' @description
       #' Generates random variables using the `rnorm` function.
       #'
-      #' @param n (integer) the number of random numbers.
+      #' @param nsamples (integer) the number of random numbers.
       #' @return [array]
       sample = function(nsamples = 1) {
         stats::rnorm(nsamples, self$mean, sd = self$sd)
