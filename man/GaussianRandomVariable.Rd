@@ -5,12 +5,12 @@
 \title{GaussianRandomVariable object}
 \description{
 Defines a Normal random variable. It uses in the backend
-all functions that defines a \code{\link[=rnorm]{Gaussian}} random variable. As other
+all functions that defines a \code{\link[=rnorm]{Gaussian}} random variable. As
 the other definitions in \code{distributions} this is an
 \code{\link[R6:R6Class]{R6}} object. Tha parametrization used
 is from a \deqn{X \sim \mathsf{Normal}(\mu, \sigma)\,,}
-where \eqn{\mu} and \eqn{\sigma} are the mean and standar deviation,
-respectively.
+where the parameters \eqn{\mu} and \eqn{\sigma} are
+the mean and standard deviation, respectively.
 \subsection{Note}{
 
 All random variables in \code{distributions} are defined as \code{\link{R6}}
@@ -32,8 +32,8 @@ parameters of the random variable \eqn{\theta \in \mathbb{R}^p}, for some
 \item{\code{mean}}{(\code{double}) \cr
 the center of the distribution, \eqn{\mu}.}
 
-\item{\code{sd}}{(\code{positive}) \cr
-the dispersion around the mean, \eqn{\sigma}.}
+\item{\code{sd}}{(\code{double}) \cr
+the dispersion around the mean, \eqn{\sigma \geq 0}.}
 }
 \if{html}{\out{</div>}}
 }

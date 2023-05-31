@@ -1,5 +1,5 @@
 # Continuous random variables -------------------------------------------------
-#' Continuous Random variable structure 
+#' Continuous Random variable structure
 #'
 #' @noRd
 #' @description
@@ -37,29 +37,29 @@ ContinuousRandomVariable <- R6::R6Class(
 )
 
 # Gaussian random variables ---------------------------------------------------
-#' GaussianRandomVariable object 
-#' 
+#' GaussianRandomVariable object
+#'
 #' @name GaussianRandomVariable
 #' @family continuous
-#' 
-#' @description Defines a Normal random variable. It uses in the backend 
-#'  all functions that defines a [`Gaussian`][rnorm] random variable. As other 
-#'  the other definitions in `distributions` this is an 
-#'  [`R6`][R6::R6Class] object. Tha parametrization used 
-#'  is from a \deqn{X \sim \mathsf{Normal}(\mu, \sigma)\,,} 
-#'  where \eqn{\mu} and \eqn{\sigma} are the mean and standar deviation, 
-#'  respectively. 
-#' 
-#'  ## Note 
+#'
+#' @description Defines a Normal random variable. It uses in the backend
+#'  all functions that defines a [`Gaussian`][rnorm] random variable. As
+#'  the other definitions in `distributions` this is an
+#'  [`R6`][R6::R6Class] object. Tha parametrization used
+#'  is from a \deqn{X \sim \mathsf{Normal}(\mu, \sigma)\,,}
+#'  where the parameters \eqn{\mu} and \eqn{\sigma} are 
+#'  the mean and standard deviation, respectively.
+#'
+#'  ## Note
 #'   All random variables in `distributions` are defined as [`R6`]
 #'   objects. The `fields` (referenced below) are needed for objects of
-#'   [`R6::R6Class`]. In our context these are what defines 
-#'   which specific instance of a 
+#'   [`R6::R6Class`]. In our context these are what defines
+#'   which specific instance of a
 #'   random variable is used. That is, the public `fields` are the
 #'   parameters of the random variable \eqn{\theta \in \mathbb{R}^p}, for some
 #'   \eqn{p}.
-#' 
-#' 
+#'
+#'
 #' @export
 GaussianRandomVariable <-
   R6::R6Class("Gaussian",
@@ -68,11 +68,11 @@ GaussianRandomVariable <-
     public = list(
       #' @field mean (`double`) \cr
       #'  the center of the distribution, \eqn{\mu}.
-      mean = NA,   
+      mean = NA,
 
-      #' @field sd (`positive`) \cr
-      #'  the dispersion around the mean, \eqn{\sigma}.
-      sd = NA, 
+      #' @field sd (`double`) \cr
+      #'  the dispersion around the mean, \eqn{\sigma \geq 0}.
+      sd = NA,
 
       #' @description
       #' Generates a Gaussian [`ContinuousRandomVariable`] object with specified
@@ -86,7 +86,7 @@ GaussianRandomVariable <-
       },
       #' @description
       #' Generates random variables using the [`stats::rnorm()`] function.
-      #' 
+      #'
       #'
       #' @template sampler
       sample = function(nsamples = 1) {
