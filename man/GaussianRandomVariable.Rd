@@ -82,6 +82,9 @@ being generated that behaves like the random variables.}
 }
 \if{html}{\out{</div>}}
 }
+\subsection{Returns}{
+(\code{array}) of random numbers from the distribution.
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-Gaussian-density"></a>}}
@@ -100,6 +103,9 @@ Evaluates the density function using the \code{\link[stats:Normal]{stats::pnorm(
 \item{\code{log}}{(Boolean) indicates if we are evaluating the \code{log-density}.}
 }
 \if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+(\code{array}) of evaluations at \code{x}.
 }
 }
 }

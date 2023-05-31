@@ -87,7 +87,7 @@ GaussianRandomVariable <-
       #' @description
       #' Generates random variables using the [`stats::rnorm()`] function.
       #'
-      #'
+      #' @return (`array`) of random numbers from the distribution.
       #' @template sampler
       sample = function(nsamples = 1) {
         stats::rnorm(nsamples, self$mean, sd = self$sd)
@@ -96,6 +96,7 @@ GaussianRandomVariable <-
       #' @description
       #' Evaluates the density function using the [`stats::pnorm()`] function.
       #'
+      #' @return (`array`) of evaluations at `x`.
       #' @template density
       density = function(x, log = TRUE) {
         stats::dnorm(x, self$mean, sd = self$sd, log = log)
