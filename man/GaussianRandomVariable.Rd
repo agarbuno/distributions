@@ -91,7 +91,7 @@ being generated that behaves like the random variables.}
 \if{html}{\out{<a id="method-Gaussian-density"></a>}}
 \if{latex}{\out{\hypertarget{method-Gaussian-density}{}}}
 \subsection{Method \code{density()}}{
-Evaluates the density function using the \code{\link[stats:Normal]{stats::pnorm()}} function.
+Evaluates the density function using the \code{\link[stats:Normal]{stats::dnorm()}} function.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{GaussianRandomVariable$density(x, log = TRUE)}\if{html}{\out{</div>}}
 }

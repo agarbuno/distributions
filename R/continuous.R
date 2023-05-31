@@ -95,7 +95,7 @@ GaussianRandomVariable <-
       },
 
       #' @description
-      #' Evaluates the density function using the [`stats::pnorm()`] function.
+      #' Evaluates the density function using the [`stats::dnorm()`] function.
       #'
       #' @return (`array`) of evaluations at `x`.
       #' @template density
