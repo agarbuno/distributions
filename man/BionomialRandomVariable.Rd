@@ -23,6 +23,10 @@ parameters of the random variable \eqn{\theta \in \mathbb{R}^p}, for some
 \eqn{p}.
 }
 }
+\seealso{
+Other discrete: 
+\code{\link{PoissonRandomVariable}}
+}
 \concept{discrete}
 \section{Super class}{
 \code{distributions::DiscreteRandomVariable} -> \code{Binomial}

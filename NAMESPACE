@@ -3,3 +3,4 @@
 export(BetaRandomVariable)
 export(BinomialRandomVariable)
 export(GaussianRandomVariable)
+export(PoissonRandomVariable)

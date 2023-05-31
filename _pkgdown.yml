@@ -2,6 +2,8 @@ url: ~
 template:
   package: tidytemplate
   bootstrap: 5
+  params: 
+    mathjax: true
 
 navbar:
   right: 
