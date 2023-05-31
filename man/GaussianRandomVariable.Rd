@@ -22,6 +22,10 @@ parameters of the random variable \eqn{\theta \in \mathbb{R}^p}, for some
 \eqn{p}.
 }
 }
+\seealso{
+Other continuous: 
+\code{\link{BetaRandomVariable}}
+}
 \concept{continuous}
 \section{Super class}{
 \code{distributions::ContinuousRandomVariable} -> \code{Gaussian}
