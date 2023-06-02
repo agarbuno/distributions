@@ -50,8 +50,8 @@ the number of independent trials, \eqn{\lambda > 0}.}
 \if{html}{\out{<a id="method-Poisson-new"></a>}}
 \if{latex}{\out{\hypertarget{method-Poisson-new}{}}}
 \subsection{Method \code{new()}}{
-Generates a Binomial \code{\link{DiscreteRandomVariable}} object with specified
-number of trials (\code{n}) and probability of success (\code{theta}).
+Generates a Poisson \code{\link{DiscreteRandomVariable}} object with specified
+rate of ocurrence of events \eqn{\lambda > 0}.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PoissonRandomVariable$new(lambda = 1)}\if{html}{\out{</div>}}
 }

@@ -47,7 +47,7 @@ DiscreteRandomVariable <- R6::R6Class(
 #'  the other definitions in `distributions` this is an
 #'  [`R6`][R6::R6Class] object. Tha parametrization used
 #'  is from a \deqn{X \sim \mathsf{Binomial}(n, \theta)\,,}
-#'  where the parameters \eqn{n} and \eqn{\theta} are 
+#'  where the parameters \eqn{n} and \eqn{\theta} are
 #'  the number of independent trials and the rate (probability) of success.
 #'
 #'  ## Note
@@ -71,7 +71,7 @@ BinomialRandomVariable <-
       n = NA,
 
       #' @field theta (`double`, constrained) \cr
-      #'  the probability of success of an independent trial, 
+      #'  the probability of success of an independent trial,
       #' \eqn{\theta \in [0,1]}.
       theta = NA,
 
@@ -141,8 +141,8 @@ PoissonRandomVariable <-
       lambda = NA,
 
       #' @description
-      #' Generates a Binomial [`DiscreteRandomVariable`] object with specified
-      #' number of trials (`n`) and probability of success (`theta`).
+      #' Generates a Poisson [`DiscreteRandomVariable`] object with specified
+      #' rate of ocurrence of events \eqn{\lambda > 0}.
       #'
       #' @param lambda   (`double`, positive) the rate of events.
       initialize = function(lambda = 1) {
@@ -154,9 +154,11 @@ PoissonRandomVariable <-
       #' @return (`array`) of random numbers from the distribution.
       #' @template sampler
       sample = function(nsamples = 1) {
-        stats::rpois(nsamples, self$lambda)
+        return(
+          stats::rpois(nsamples, self$lambda) |>
+            format_samples(nreps)
+        )
       },
-
       #' @description
       #' Evaluates the density function using the [`stats::dpois()`] function.
       #'

@@ -47,7 +47,7 @@ ContinuousRandomVariable <- R6::R6Class(
 #'  the other definitions in `distributions` this is an
 #'  [`R6`][R6::R6Class] object. Tha parametrization used
 #'  is from a \deqn{X \sim \mathsf{Normal}(\mu, \sigma)\,,}
-#'  where the parameters \eqn{\mu} and \eqn{\sigma} are 
+#'  where the parameters \eqn{\mu} and \eqn{\sigma} are
 #'  the mean and standard deviation, respectively.
 #'
 #'  ## Note
@@ -91,9 +91,9 @@ GaussianRandomVariable <-
       #' @return (`array`) of random numbers from the distribution.
       #' @template sampler
       sample = function(nsamples = 1, nreps = 1) {
-        ntotal <- nsamples * nreps 
+        ntotal <- nsamples * nreps
         return(
-          stats::rnorm(ntotal, self$mean, sd = self$sd) |> 
+          stats::rnorm(ntotal, self$mean, sd = self$sd) |>
             format_samples(nreps)
         )
       },
@@ -120,7 +120,7 @@ GaussianRandomVariable <-
 #'  the other definitions in `distributions` this is an
 #'  [`R6`][R6::R6Class] object. Tha parametrization used
 #'  is from a \deqn{X \sim \mathsf{Beta}(\alpha, \beta)\,,}
-#'  where the parameters \eqn{\alpha} and \eqn{\beta} are 
+#'  where the parameters \eqn{\alpha} and \eqn{\beta} are
 #'  the parameters defining a Beta random variable.
 #'
 #'  ## Note
@@ -164,7 +164,7 @@ BetaRandomVariable <-
       #' @template sampler
       sample = function(nsamples = 1) {
         return(
-          stats::rbeta(nsamples, self$alpha, self$beta) |> 
+          stats::rbeta(nsamples, self$alpha, self$beta) |>
             format_samples(nreps)
         )
       },
