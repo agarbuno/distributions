@@ -82,7 +82,7 @@ BinomialRandomVariable <-
       #' @param n (`integer`) the center of the distribution.
       #' @param theta   (`double`, constrained) the dispersion around
       #'  the center of the distribution.
-      initialize = function(n = 0, theta = 1) {
+      initialize = function(n = 10, theta = 0.5) {
         self$n <- n
         self$theta <- theta
       },
@@ -91,8 +91,11 @@ BinomialRandomVariable <-
       #'
       #' @return (`array`) of random numbers from the distribution.
       #' @template sampler
-      sample = function(nsamples = 1) {
-        stats::rbinom(nsamples, self$n, self$theta)
+      sample = function(nsamples = 1, nreps = 1) {
+        return(
+          stats::rbinom(nsamples, self$n, self$theta) |>
+            format_samples(nreps)
+        )
       },
 
       #' @description
@@ -153,7 +156,7 @@ PoissonRandomVariable <-
       #'
       #' @return (`array`) of random numbers from the distribution.
       #' @template sampler
-      sample = function(nsamples = 1) {
+      sample = function(nsamples = 1, nreps = 1) {
         return(
           stats::rpois(nsamples, self$lambda) |>
             format_samples(nreps)
